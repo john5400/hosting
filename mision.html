@@ -3,49 +3,123 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Misión de la Fundación de Gatos - Nuestro compromiso con los gatos necesitados.">
-    <title>Misión - Fundación de Gatos</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>Galería de Gatitos</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Contenedor del grid */
+        .layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas responsivas */
+            gap: 20px; /* Espacio entre los elementos */
+            width: 90%; /* Ancho del grid */
+            max-width: 1200px; /* Ancho máximo */
+            margin-bottom: 20px; /* Espacio debajo del grid */
+        }
+
+        /* Estilos para cada item del grid */
+        .layout div {
+            background-color: yellowgreen; /* Fondo blanco */
+            border-radius: 10px; /* Bordes redondeados */
+            overflow: hidden; /* Oculta el desbordamiento de las imágenes */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+        }
+
+        /* Estilos para las imágenes */
+        .layout img {
+            width: 100%; /* Ocupa todo el ancho del contenedor */
+            height: 100%; /* Ocupa todo el alto del contenedor */
+            object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+            display: block; /* Elimina el espacio inferior de las imágenes */
+        }
+
+        /* Efecto hover para los items */
+        .layout div:hover {
+            transform: scale(1.05); /* Escala ligeramente el elemento */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+        }
+
+        /* Estilos para el botón de retroceso */
+        .boton-retroceso {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #25D366; /* Color de fondo */
+            color: blueviolet; /* Color del texto */
+            text-decoration: none; /* Elimina el subrayado */
+            border-radius: 50px; /* Bordes redondeados */
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease; /* Transición suave */
+        }
+
+        /* Efecto hover para el botón */
+        .boton-retroceso:hover {
+            background-color: #128C7E; /* Cambia el color al pasar el mouse */
+        }
+
+        /* Media Queries para ajustes adicionales */
+        @media (max-width: 768px) {
+            .layout {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas más pequeñas en tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .layout {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Columnas más pequeñas en móviles */
+            }
+
+            .boton-retroceso {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <h1>Fundación de Gatos</h1>
-        <nav aria-label="Menú principal">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="mision.html">Misión</a></li>
-                <li><a href="#adopta">Adopta un Gato</a></li>
-                <li><a href="#donaciones">Donaciones</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-            </ul>
-        </nav>
-    </header>
-
-    <main>
-        <section id="mision">
-            <h2>Nuestra Misión</h2>
-            <p> Fundación Gatitos Felices, nuestra misión es rescatar, proteger y encontrar hogares amorosos para gatitos pequeños en situación de vulnerabilidad. 
-                <br> Nos comprometemos a promover la adopción responsable, brindando educación sobre el cuidado de los gatos y asegurándonos de que cada felino encuentre una familia que le brinde amor, 
-                <br>atención y un hogar seguro. Trabajamos incansablemente para reducir el abandono y mejorar la calidad de vida de los gatos, creando un mundo donde cada gatito tenga la oportunidad de ser feliz.
-        </section>
-    </main>
-    <main>
-        <section id="Vision">
-            <h2>Nuestra Misión</h2>
-            <p>Nuestra visión es convertirnos en un referente nacional en el rescate y adopción de gatitos pequeños, 
-                <br>siendo reconocidos por nuestro compromiso con el bienestar animal y la promoción de una cultura de amor y respeto hacia los gatos. Aspiramos a construir una comunidad de personas conscientes y responsables que compartan 
-                <br>nuestro sueño de un futuro donde ningún gatito sea abandonado y todos tengan la oportunidad de crecer en un hogar lleno de cariño y cuidados.</p>
-        </section>
-    </main>
-
-    <footer>
-        <p>&copy; 2025 Fundación de Gatos. Todos los derechos reservados.</p>
+    <section class="layout">
         <div>
-            <a href="https://www.facebook.com" aria-label="Facebook"><img src="facebook-icon.png" alt="Facebook"></a>
-            <a href="https://www.twitter.com" aria-label="Twitter"><img src="twitter-icon.png" alt="Twitter"></a>
-            <a href="https://www.instagram.com" aria-label="Instagram"><img src="instagram-icon.png" alt="Instagram"></a>
+            <img src="gato1.jpeg" alt="Gato 1">
         </div>
-    </footer>
+        <div>
+            <img src="gato2.jpeg" alt="Gato 2">
+        </div>
+        <div>
+            <img src="gato3.jpeg" alt="Gato 3">
+        </div>
+        <div>
+            <img src="gato9.jpeg" alt="Gato 4">
+        </div>
+        <div>
+            <img src="gato5.jpeg" alt="Gato 5">
+        </div>
+        <div>
+            <img src="gato6.jpeg" alt="Gato 6">
+        </div>
+        <div>
+            <img src="gato7.jpeg" alt="Gato 7">
+        </div>
+        <div>
+            <img src="gato8.jpeg" alt="Gato 8">
+        </div>
+        <div>
+            <img src="gato9.jpeg" alt="Gato 9">
+        </div>
+    </section>
+
+    <!-- Botón de retroceso -->
+    <a href="index.html" class="boton-retroceso">Volver a Inicio</a>
 </body>
 </html>
