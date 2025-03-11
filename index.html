@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fundación de Gatos - Ayudamos a gatos necesitados a encontrar un hogar amoroso. ¡Adopta o dona hoy!">
+    <title>Patitas felices - Adopta y Dona</title>
+    <img src="logo_gatito.jpeg" alt="">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" type="image/png" href="huellas_de_patitas.jpeg">
+</head>
+<body>
+    <header>
+        
+        <h1>Gatitos con Amor</h1>
+        <nav aria-label="Menú principal">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="mision.html">Quienes somos</a></li> <!-- Enlace a la página de Misión -->
+                <li><a href="#adopta">Adopta un Gato</a></li>
+                <li><a href="#donaciones">Donaciones</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <main>
+        <section id="inicio">
+           <strong><h2>Bienvenidos a la Fundación de Gatos</h2></strong>
+           <br>
+           <br>
+           <strong> <p>Ayudamos a gatos necesitados a encontrar un hogar amoroso. <br>¡Adopta o <br>dona hoy!</p></strong>
+        </section>
+
+        <section id="adopta">
+            <h2>Gatos en Adopción</h2>
+            <!-- Slider de gatos -->
+            <div class="slider">
+                <div class="slides">
+                    <div class="slide"><img src="gatoscool.jpeg" alt="Gato 1" class="zoomable"></div>
+                    
+                    <div class="slide"><img src="pexels-miladinho-30029657.jpg" alt="Gato 2"class="zoomable"></div>
+                    
+                   
+                </div>
+                <button class="prev" aria-label="Anterior">&#10094;</button>
+                <button class="next" aria-label="Siguiente">&#10095;</button>
+            </div>
+           <div class="enlace-container">
+        <a href="galeria.html" class="enlace-destacado">Conoce nuestra galería de fotos</a>
+        </section>
+
+        <section id="Nota">
+            <strong><h2>"Cada patita cuenta, cada vida importa."</h2></strong><br>
+            <strong><p>Tu apoyo nos ayuda a seguir rescatando y cuidando gatos. ¡Gracias!</p></strong>
+           
+        </section>
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>¿Tienes preguntas? ¡Contáctanos!</p>
+            
+        
+            <!-- Enlace de WhatsApp -->
+            <div class="whatsapp-container">
+                <a href="https://wa.me/+573102822556" class="whatsapp-button" target="_blank" rel="noopener noreferrer">
+                    <img src="iconwhatsapp.png" alt="WhatsApp">
+                    <span>Chatea con nosotros</span>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Gatitos con Amor. Todos los derechos reservados. <br>
+        V (1.0)</p>
+        
+    </footer>
+
+    <!-- Modal -->
+    <div id="modal" class="modal" role="dialog" aria-labelledby="modal-nombre" aria-hidden="true">
+        <div class="modal-content">
+            <button class="close" aria-label="Cerrar">&times;</button>
+            <img id="modal-image" src="" alt="Gato">
+            <h2 id="modal-nombre"></h2>
+            <p id="modal-edad"></p>
+            <p id="modal-descripcion"></p>
+            <button onclick="adoptar()">Adoptar</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
