@@ -21,10 +21,10 @@
         /* Contenedor del grid */
         .layout {
             display: grid;
-            grid-template-columns: repeat(3, 500px); /* 3 columnas de 150px cada una */
-            grid-template-rows: repeat(3, 400px); /* 3 filas de 150px cada una */
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Columnas responsivas */
             gap: 20px; /* Espacio entre los elementos */
-            
+            width: 90%; /* Ancho del grid */
+            max-width: 1200px; /* Ancho máximo */
             margin-bottom: 20px; /* Espacio debajo del grid */
         }
 
@@ -68,6 +68,24 @@
         .boton-retroceso:hover {
             background-color: #128C7E; /* Cambia el color al pasar el mouse */
         }
+
+        /* Media Queries para ajustes adicionales */
+        @media (max-width: 768px) {
+            .layout {
+                grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Columnas más pequeñas en tablets */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .layout {
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Columnas más pequeñas en móviles */
+            }
+
+            .boton-retroceso {
+                padding: 8px 16px;
+                font-size: 14px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -79,7 +97,6 @@
             <img src="gato2.jpeg" alt="Gato 2">
         </div>
         <div>
-
             <img src="gato3.jpeg" alt="Gato 3">
         </div>
         <div>
