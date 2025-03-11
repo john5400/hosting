@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Gatitos</title>
+    <style>
+        /* Estilos generales */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Contenedor del grid */
+        .layout {
+            display: grid;
+            grid-template-columns: repeat(3, 500px); /* 3 columnas de 150px cada una */
+            grid-template-rows: repeat(3, 400px); /* 3 filas de 150px cada una */
+            gap: 20px; /* Espacio entre los elementos */
+            
+            margin-bottom: 20px; /* Espacio debajo del grid */
+        }
+
+        /* Estilos para cada item del grid */
+        .layout div {
+            background-color: yellowgreen; /* Fondo blanco */
+            border-radius: 10px; /* Bordes redondeados */
+            overflow: hidden; /* Oculta el desbordamiento de las imágenes */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave */
+        }
+
+        /* Estilos para las imágenes */
+        .layout img {
+            width: 100%; /* Ocupa todo el ancho del contenedor */
+            height: 100%; /* Ocupa todo el alto del contenedor */
+            object-fit: cover; /* Ajusta la imagen sin distorsionarla */
+            display: block; /* Elimina el espacio inferior de las imágenes */
+        }
+
+        /* Efecto hover para los items */
+        .layout div:hover {
+            transform: scale(1.05); /* Escala ligeramente el elemento */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
+        }
+
+        /* Estilos para el botón de retroceso */
+        .boton-retroceso {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #25D366; /* Color de fondo */
+            color: blueviolet; /* Color del texto */
+            text-decoration: none; /* Elimina el subrayado */
+            border-radius: 50px; /* Bordes redondeados */
+            font-size: 16px;
+            font-weight: bold;
+            transition: background-color 0.3s ease; /* Transición suave */
+        }
+
+        /* Efecto hover para el botón */
+        .boton-retroceso:hover {
+            background-color: #128C7E; /* Cambia el color al pasar el mouse */
+        }
+    </style>
+</head>
+<body>
+    <section class="layout">
+        <div>
+            <img src="gato1.jpeg" alt="Gato 1">
+        </div>
+        <div>
+            <img src="gato2.jpeg" alt="Gato 2">
+        </div>
+        <div>
+
+            <img src="gato3.jpeg" alt="Gato 3">
+        </div>
+        <div>
+            <img src="gato9.jpeg" alt="Gato 4">
+        </div>
+        <div>
+            <img src="gato5.jpeg" alt="Gato 5">
+        </div>
+        <div>
+            <img src="gato6.jpeg" alt="Gato 6">
+        </div>
+        <div>
+            <img src="gato7.jpeg" alt="Gato 7">
+        </div>
+        <div>
+            <img src="gato8.jpeg" alt="Gato 8">
+        </div>
+        <div>
+            <img src="gato9.jpeg" alt="Gato 9">
+        </div>
+    </section>
+
+    <!-- Botón de retroceso -->
+    <a href="index.html" class="boton-retroceso">Volver a Inicio</a>
+</body>
+</html>
